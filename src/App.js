@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Search from './Search';
+import Detail from './Detail';
+import Youtube from './Youtube';
 
 function App() {
+  // router
+  // / -> 검색페이지
+  // /detail/{id} -> 상세페이지
+  // /youtube/{id} -> 유튜브 영상 페이지
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Search />} />
+      <Route path="/detail/:id" element={<Detail />} />
+      <Route path="/youtube/:id" element={<Youtube />} />
+    </Routes>
   );
 }
 
