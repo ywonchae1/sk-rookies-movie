@@ -36,7 +36,7 @@ export default function SearchBox() {
           type="button"
           style={{marginLeft: 10}}
           onClick={() => fetchMovie(query)}>
-          Submit
+          Search
         </Button>
       </RowView>
       </Form.Group>
